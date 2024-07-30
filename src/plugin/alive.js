@@ -29,7 +29,7 @@ const readMore = more.repeat(4001)
 ⛥ *Type:* NodeJs
 ⛥ *Baileys:* Multi Device
 ╰──────────⳹
-> © Toxic Alexa\n\n ${readMore};
+> © Toxic Alexa\n\n ${readMore}`;
 
   const buttons = [
         {
