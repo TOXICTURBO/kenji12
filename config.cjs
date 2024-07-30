@@ -17,6 +17,7 @@ const config = {
   REJECT_CALL: process.env.REJECT_CALL !== undefined ? process.env.REJECT_CALL === 'true' : false, 
   NOT_ALLOW: process.env.NOT_ALLOW !== undefined ? process.env.NOT_ALLOW === 'true' : true,
   MODE: process.env.MODE || "public",
+  BOT_NAME: process.env.BOT_NAME || "Kenji Md",
   OWNER_NAME: process.env.OWNER_NAME || "TurboMods",
   OWNER_NUMBER: process.env.OWNER_NUMBER || "916380260672",
   GEMINI_KEY: process.env.GEMINI_KEY || "",
