@@ -15,7 +15,7 @@ const alive = async (m, Turbo) => {
   const uptimeMessage = `> Kenji Md あ⁩
   
 乂───『 *I N F O*』───乂
-⛥ *Bot Name:* Kenji Mc
+⛥ *Bot Name:* Kenji Md
 ⛥ *Type:* NodeJs
 ⛥ *Baileys:* Multi Device
 ╰──────────⳹
