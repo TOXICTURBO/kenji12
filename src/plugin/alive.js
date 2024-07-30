@@ -1,5 +1,7 @@
 import pkg, { prepareWAMessageMedia } from '@whiskeysockets/baileys';
 const { generateWAMessageFromContent, proto } = pkg;
+import os from 'os'
+import fetch from 'node-fetch'
 
 const alive = async (m, Matrix) => {
   const uptimeSeconds = process.uptime();
@@ -7,20 +9,27 @@ const alive = async (m, Matrix) => {
   const hours = Math.floor((uptimeSeconds % (24 * 3600)) / 3600);
   const minutes = Math.floor((uptimeSeconds % 3600) / 60);
   const seconds = Math.floor(uptimeSeconds % 60);
+  let name = await conn.getName(m.sender)
+  const more = String.fromCharCode(8206)
+const readMore = more.repeat(4001)
   
   const prefix = /^[\\/!#.]/gi.test(m.body) ? m.body.match(/^[\\/!#.]/gi)[0] : '/';
   const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).toLowerCase() : '';
     if (['alive', 'uptime', 'runtime'].includes(cmd)) {
 
-  const uptimeMessage = `* Kenji MD *
-_________________________________________
-
-*📆 ${days} Day*
-*🕰️ ${hours} Hour*
-*⏳ ${minutes} Minute*
-*⏲️ ${seconds} Second*
-_________________________________________
-`;
+  const uptimeMessage = `> ${BOT_NAME} あ⁩ 」\n
+- Hii ${name} User
+   
+乂───『 *U S E R*』───乂
+⛥ *Name:* ${name}
+╰──────────⳹
+   
+乂───『 *I N F O*』───乂
+⛥ *Bot Name:* ${BOT_NAME}
+⛥ *Type:* NodeJs
+⛥ *Baileys:* Multi Device
+╰──────────⳹
+> © Toxic Alexa\n\n ${readMore};
 
   const buttons = [
         {
